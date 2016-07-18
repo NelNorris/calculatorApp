@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Calculator";
+}
+
+<div class="row">
+    
+    <div id="CalculatorSpace">
+    <form name="Calc">
+        <input type="text" name="display" id="display" value=""/>
+        <table class="cal">
+            <tr>
+                <td><input type="button" name="btn7" id="btnSeven" value="7" onclick="enterNumber(7)" /></td>
+                <td><input type="button" id="btn8" value="8" onclick="enterNumber(8)" /></td>
+                <td><input type="button" id="btn9" value="9" onclick="enterNumber(9)" /></td>
+                <td><input type="button" id="btnMultiply" value="*" /></td>
+                <td><input type="submit" id="btnClear" value="CLR" onclick="clearDisplay()" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" id="btnFour" value="4" onclick="enterNumber(4)" /></td>
+                <td><input type="button" id="btn5" value="5" onclick="enterNumber(5)" /></td>
+                <td><input type="button" id="btn6" value="6" onclick="enterNumber(6)" /></td>
+                <td><input type="submit" id="btnPlus" value="+" /></td>
+                <td><input type="button" id="btnDelete" value="DEL" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" id="btn1" value="1" onclick="enterNumber(1)" /></td>
+                <td><input type="button" id="btn2" value="2" onclick="enterNumber(2)" /></td>
+                <td><input type="button" id="btn3" value="3" onclick="enterNumber(3)" /></td>
+                <td><input type="submit" id="btnDivide" value="/" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" id="btn0" value="0" onclick="enterNumber(0)" /></td>
+                <td><input type="button" id="btnDecimal" value="." onclick="enterNumber('.')" /></td>
+                <td><input type="submit" id="btnEqual" value="=" /></td>
+                <td><input type="submit" id="btnMinus" value="-" /></td>
+            </tr>
+        </table>
+        
+    </form>
+</div>
+<script>
+    function enterNumber(n) {
+        document.getElementById('display').value = document.getElementById('display').value + n;
+    }
+    function clearDisplay() {
+        document.getElementById('display').value = "";
+    }
+</script>
+
+</div>
